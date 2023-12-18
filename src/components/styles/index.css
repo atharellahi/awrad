@@ -34,6 +34,15 @@
     align-items: center;
 }
 
+.english {
+    text-align: left;
+    padding: 10px 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 .value {
     width: calc(100vw - 60px);
 }
@@ -45,4 +54,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.translationselect {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#selecttranslation {
+    margin-left: 10px;
 }
