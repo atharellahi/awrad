@@ -24,7 +24,7 @@ const Translation = () => {
   const handlegottotop = () => {
     const bdy = document.querySelector('body')
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    bdy.scrollTo({ top: 0, behavior: 'smooth' });
+    bdy.scrollTo({ top: 0, behavior: 'smooth' }); 
 
   }
 
