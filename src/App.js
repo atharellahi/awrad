@@ -24,11 +24,13 @@ const Translation = () => {
   const handlegottotop = () => {
     const bdy = document.querySelector('body')
     window.scrollTo({ top: 0, behavior: 'smooth' });
-    bdy.scrollTo({ top: 0, behavior: 'smooth' }); 
-
+    bdy.scrollTo({ top: 0, behavior: 'smooth' });
   }
 
   const scrolltoverse = () => {
+    if (verseinput < 1 || verseinput > data.length) {
+      return
+    }
     const verse = document.querySelectorAll('.table')
     verse[verseinput - 1].scrollIntoView({ behavior: "smooth", block: 'center', inline: "nearest" });
   }
@@ -79,8 +81,13 @@ const Translation = () => {
       {showModal ? <div className='verseselectmodal'>
         <div className='modalheader'> Select Verse</div>
         <div className='modalinputholder'>
-          <input type='number' placeholder='Enter Verse Number' className='verseinput' value={verseinput} onChange={(e) => { setverseinput(e.target.value) }} ></input>
-          <button className='gobtn' onClick={() => scrolltoverse()}><img className='btnarrow' src={uparrow}></img></button>
+          <input type='number' placeholder='Enter Verse Number' className='verseinput' value={verseinput} onChange={(e) => { setverseinput(e.target.value) }} />
+          <button className='gobtn' onClick={() => {
+            scrolltoverse()
+            setShowModal(false)
+          }}>
+            <img className='btnarrow' src={uparrow} alt='go to verse button' />
+          </button>
         </div>
         <div className='closemodal' onClick={() => setShowModal(false)}>X</div>
       </div> : null}
