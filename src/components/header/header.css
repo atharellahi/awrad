@@ -1,4 +1,5 @@
 .header {
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -8,10 +9,31 @@
     top: 0;
     left: 0;
     background-color: #303339;
+    transition: .25s;
+}
+
+.header.light {
+    background-color: #e0e0e0;
 }
 
 .logo {
     height: 90%;
     width: auto;
-} 
+    transition: .25s;
+}
 
+.darkmodeicon {
+    position: absolute;
+    right: 20px;
+    fill: white;
+    height: 90%;
+    cursor: pointer;
+}
+
+.lightmodeicon {
+    fill: rgb(255, 255, 87);
+    height: 90%;
+    cursor: pointer;
+    position: absolute;
+    right: 20px;
+}

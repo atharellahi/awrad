@@ -11,6 +11,7 @@ const Translation = () => {
   const [showModal, setShowModal] = useState(false)
   const [verseinput, setverseinput] = useState(1)
   const avaliabletranslations = ['reading', 'urdu', 'english']
+  const [theme, settheme] = useState('dark')
 
   function toTitleCase(str) {
     return str.replace(
@@ -37,16 +38,16 @@ const Translation = () => {
 
   return (
     <>
-      <Header />
-      <div className='parent'>
-        <div className='translationswitch'>
+      <Header theme={theme} settheme={settheme} />
+      <div className={`parent ${theme}`}>
+        <div className={`translationswitch ${theme}`}>
           {avaliabletranslations.map((item, index) => {
 
             const handletranslationswitch = (val) => {
               setSelectedTranslation(val)
             }
             return (
-              <div key={index} className={`${selectedTranslation === item ? 'selectedswitch' : 'switch'}`}
+              <div key={index} className={`${selectedTranslation === item ? `selectedswitch ${theme}` : `switch ${theme}`}`}
                 onClick={() => handletranslationswitch(item)}>
                 {toTitleCase(item)}
               </div>
@@ -59,18 +60,18 @@ const Translation = () => {
         {data.map((item, index) => {
 
           return (
-            <div key={index} className='table'>
-              {item.ID ? <div className='index'>
-                <span className='versenumber'>{item.ID}</span>&nbsp;&nbsp;&nbsp;<span className='translation'>{selectedTranslation === 'reading' ? "" : toTitleCase(selectedTranslation)}</span>
+            <div key={index} className={`table ${theme}`}>
+              {item.ID ? <div className={`index ${theme}`}>
+                <span className={`versenumber ${theme}`}>{item.ID}</span>&nbsp;&nbsp;&nbsp;<span className={`translation ${theme}`}>{selectedTranslation === 'reading' ? "" : toTitleCase(selectedTranslation)}</span>
               </div> : null}
-              {item.Arabic ? <div className='arabic'>
-                <span className='value'>{item.Arabic}</span>
+              {item.Arabic ? <div className={`arabic ${theme}`}>
+                <span className={`value ${theme}`}>{item.Arabic}</span>
               </div> : null}
-              {item['Translation Urdu'] && selectedTranslation === 'urdu' ? <div className='urdu'>
-                <span className='value'>{item['Translation Urdu']} </span>
+              {item['Translation Urdu'] && selectedTranslation === 'urdu' ? <div className={`urdu ${theme}`}>
+                <span className={`value ${theme}`}>{item['Translation Urdu']} </span>
               </div> : null}
-              {item['Translation English'] && selectedTranslation === 'english' ? <div className='english'>
-                <span className='value'>{item['Translation English']}</span>
+              {item['Translation English'] && selectedTranslation === 'english' ? <div className={`english ${theme}`}>
+                <span className={`value ${theme}`}>{item['Translation English']}</span>
               </div> : null}
             </div>
           )

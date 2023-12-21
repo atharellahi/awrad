@@ -3,6 +3,14 @@
     background-color: #1F2125;
     color: white;
     margin-top: 145px;
+    transition: .25s;
+}
+
+.parent.light {
+    width: 100%;
+    background-color: #c5c5c5;
+    color: rgb(0, 0, 0);
+    margin-top: 145px;
 }
 
 .table {
@@ -12,7 +20,11 @@
     max-width: 800px;
     margin: auto;
     padding-bottom: 30px;
+    transition: .25s;
+}
 
+.table.light {
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .index {
@@ -75,6 +87,12 @@
     justify-content: space-around;
     padding: 20px 0;
     border-bottom: 1px solid rgb(255, 255, 255);
+    transition: .25s;
+}
+
+.translationswitch.light {
+    background-color: #c5c5c5;
+    border-bottom: 1px solid rgb(0, 0, 0);
 }
 
 .switch {
@@ -90,9 +108,18 @@
     transition: .25s;
 }
 
+.switch.light {
+    background-color: #949494;
+}
+
 .switch:hover {
     background-color: #3a3d44;
     transition: .25s;
+}
+
+.switch.light:hover {
+    background-color: #b4b4b4;
+
 }
 
 .selectedswitch {
@@ -107,7 +134,12 @@
     border-radius: 20px;
     font-weight: 600;
     cursor: pointer;
+    transition: .25s;
+}
 
+.selectedswitch.light {
+    background-color: #b4b4b4;
+    border: 3px solid rgb(0, 0, 0);
 }
 
 .verseselect {
