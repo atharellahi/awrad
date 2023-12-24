@@ -8,7 +8,7 @@
 
 .parent.light {
     width: 100%;
-    background-color: #c5c5c5;
+    background-color: #ffffff;
     color: rgb(0, 0, 0);
     margin-top: 145px;
 }
@@ -91,7 +91,7 @@
 }
 
 .translationswitch.light {
-    background-color: #c5c5c5;
+    background-color: #ffffff;
     border-bottom: 1px solid rgb(0, 0, 0);
 }
 
@@ -109,7 +109,7 @@
 }
 
 .switch.light {
-    background-color: #949494;
+    background-color: #e4e4e4;
 }
 
 .switch:hover {
@@ -118,7 +118,7 @@
 }
 
 .switch.light:hover {
-    background-color: #b4b4b4;
+    background-color: #dadada;
 
 }
 
@@ -138,7 +138,7 @@
 }
 
 .selectedswitch.light {
-    background-color: #b4b4b4;
+    background-color: #e4e4e4;
     border: 3px solid rgb(0, 0, 0);
 }
 
